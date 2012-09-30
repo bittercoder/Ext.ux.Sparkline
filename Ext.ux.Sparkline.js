@@ -1078,7 +1078,8 @@ Ext.ux.Sparkline.GridPlugin = (function() {
                 for (i = 0; i < cmlen; i++) {
                     var col = cm.getColumnAt(i);
                     if(cm.config[i].xtype=='sparklinecolumn'){
-                        var celllen = this.getStore().getTotalCount();
+                        //var celllen = this.getStore().getTotalCount();
+                        var celllen = this.getStore().getCount();
                         for (j = 0; j < celllen; j++) {
                             var cell = this.view.getCell(j, i);
                             cell.innerHTML = '';
